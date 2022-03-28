@@ -1,0 +1,6 @@
+[submodule "DataScience_Nanodegree"]
+	path = DataScience_Nanodegree
+	url = https://github.com/vpontello/DataScience_Nanodegree.git
+[submodule "DSND_Term2"]
+	path = DSND_Term2
+	url = https://github.com/vpontello/DSND_Term2.git
