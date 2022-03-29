@@ -1333,7 +1333,3 @@ I recommend that you create a backup branch before rebasing, so that it's easy t
 * [git-rebase from the Git Docs](https://git-scm.com/docs/git-rebase)
 * [git-rebase from the Atlassian blog](https://www.atlassian.com/git/tutorials/rewriting-history#git-rebase)
 <!-- #endregion -->
-
-```python
-
-```
