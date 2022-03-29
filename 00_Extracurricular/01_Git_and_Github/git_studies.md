@@ -1329,9 +1329,9 @@ The git rebase command is used to do a great many things.
 I recommend that you create a backup branch before rebasing, so that it's easy to return to your previous state. If you're happy with the rebase, then you can just delete the backup branch!
 
 #### Further Research
-[Git Branching - Rebasing from the Git Book](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
-[git-rebase from the Git Docs](https://git-scm.com/docs/git-rebase)
-[git-rebase from the Atlassian blog](https://www.atlassian.com/git/tutorials/rewriting-history#git-rebase from the Atlassian blog)
+* [Git Branching - Rebasing from the Git Book](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
+* [git-rebase from the Git Docs](https://git-scm.com/docs/git-rebase)
+* [git-rebase from the Atlassian blog](https://www.atlassian.com/git/tutorials/rewriting-history#git-rebase)
 <!-- #endregion -->
 
 ```python
