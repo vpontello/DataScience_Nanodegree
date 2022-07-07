@@ -160,19 +160,18 @@ def return_figures():
     # Make a bar chart showing the rural population of these countries ['United States', 'China', 'Japan', 'Germany', 'United Kingdom', 'India', 'France', 'Brazil', 'Italy', 'Canada'] in the year 2015.
     
     graph_five = []
-    df = cleandata('data/API_SP.RUR.TOTL_DS2_en_csv_v2_9914824.csv')
-    df = df['Country Name','2015']
-    df.sort_values('hectaresarablelandperperson', ascending=False, inplace=True)
-    df = df[df['year'] == 2015] 
+    df_five = cleandata('data/API_SP.RUR.TOTL_DS2_en_csv_v2_9914824.csv', ['Country Name', '2015'], ['2015'])
+    df_five.columns = ['country','year','ruralpopulation']
+    df_five.sort_values('ruralpopulation', ascending=False, inplace=True)
 
     graph_five.append(
       go.Bar(
-      x = df['Country Name'].tolist(),
-      y = df['2015'].tolist(),
+      x = df_five['country'].tolist(),
+      y = df_five['ruralpopulation'].tolist(),
       )
     )
 
-    layout_five = dict(title = 'Rural population per country',
+    layout_five = dict(title = 'Rural population per country in 2015',
                 xaxis = dict(title = 'Country',),
                 yaxis = dict(title = 'Rural Population'),
                 )    
