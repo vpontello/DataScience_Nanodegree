@@ -43,7 +43,7 @@ class Recommender():
         # Create user-item matrix
         usr_itm = self.reviews[['user_id', 'movie_id', 'rating', 'timestamp']]
         self.user_item_df = usr_itm.groupby(['user_id','movie_id'])['rating'].max().unstack()
-        self.user_item_mat= np.array(self.user_item_df)
+        self.user_item_mat= np.matrix(self.user_item_df)
 
         # Store more inputs
         self.latent_features = latent_features
@@ -63,38 +63,49 @@ class Recommender():
 
         # initialize sse at 0 for first iteration
         sse_accum = 0
+        errors = []
 
         # keep track of iteration and MSE
-        print("Optimizaiton Statistics")
-        print("Iterations | Mean Squared Error ")
+        # print("Optimizaiton Statistics")
+        # print("Iterations | Mean Squared Error ")
 
-        # for each iteration
-        for iteration in range(self.iters):
+        for i in range(self.iters):
+            # for each iteration
+            # keep track of iteration and MSE
+            print(f"Optimizaiton Statistics: iter {i}")
+            print(f"Mean Squared Error {np.mean(errors)}")
 
             # update our sse
-            old_sse = sse_accum
             sse_accum = 0
-
+            errors = []
+            
             # For each user-movie pair
-            for i in range(self.n_users):
-                for j in range(self.n_movies):
+            for user in range(self.n_users):
+                # if the rating exists
+                ratings_index = np.argwhere(~np.isnan(self.user_item_mat[user]))[:,1]
 
-                    # if the rating exists
-                    if self.user_item_mat[i, j] > 0:
+                for movie in ratings_index:
 
-                        # compute the error as the actual minus the dot product of the user and movie latent features
-                        diff = self.user_item_mat[i, j] - np.dot(user_mat[i, :], movie_mat[:, j])
+                    actual = self.user_item_mat[user,movie]
+                    pred = np.dot(user_mat[user,:], movie_mat[:,movie])
+    
+                    # compute the error as the actual minus the dot product of the user and movie latent features
+                    error = actual - pred
+                    # Keep track of the sum of squared errors for the matrix
+                    errors.append(error**2)
+                    sse_accum += error**2
+                    
+                    for latent_feature in range(latent_features):
 
-                        # Keep track of the sum of squared errors for the matrix
-                        sse_accum += diff**2
-
+                        u_old = user_mat[user,latent_feature]
+                        v_old = movie_mat[latent_feature,movie]
                         # update the values in each matrix in the direction of the gradient
-                        for k in range(self.latent_features):
-                            user_mat[i, k] += self.learning_rate * (2*diff*movie_mat[k, j])
-                            movie_mat[k, j] += self.learning_rate * (2*diff*user_mat[i, k])
+                        u_new = u_old + (learning_rate * 2 * (actual - pred) * v_old)
+                        v_new = v_old + (learning_rate * 2 * (actual - pred) * u_old)
+                        
+                        user_mat[user,latent_feature] = u_new
+                        movie_mat[latent_feature,movie] = v_new
 
-            # print results
-            print("%d \t\t %f" % (iteration+1, sse_accum / self.num_ratings))
 
         # SVD based fit
         # Keep user_mat and movie_mat for safe keeping
@@ -104,7 +115,7 @@ class Recommender():
         # Knowledge based fit
         self.ranked_movies = rf.create_ranked_df(self.movies, self.reviews)
 
-
+    
     def predict_rating(self, user_id, movie_id):
         '''
         INPUT:
