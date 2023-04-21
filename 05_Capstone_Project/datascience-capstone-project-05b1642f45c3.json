@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "datascience-capstone-project",
+  "private_key_id": "05b1642f45c3feba6b974b138237244bd5f45466",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC1NmdTZR2zCKyh\nkGqx9yzdV3/ZcR0JK1X0ZIL/AuLTv8Pp9r9m4yefgE/QXliv/hA1hQoHvlO1DSr3\nwvKwo+G6ZCnRwQK347nLQFh4x8DpQU/T2pOwE3SsJaxc3vwSY0ZoAiXn9KsXzYoT\n7/pnrjkRctpBrzFCl5f3dBPjFMceLQMqMH/Pr5DbLK7RZN9d573utu0pv2o85MGH\nbEStUL+m1rCx2RpccWSDbkoZu7BDN7cl94iVC76TP0Gwr+toi0gAMIwSYZn/M3ns\nkfnlzTEujUeMsQgRvKKurPmr6D7/PKy/z4BGr3r/cXPfZORHEQHqV21hFsUXSxG+\ngTdMat89AgMBAAECggEAPdy9t12MnwL2FA2+LtUH7uQhFDUmSWwO4uixQ6dTkiAk\nHKoMu24Op8fg92xN8H7WP78UJoKWBvfg1EYsHZtEwyHQmPfAGtDWK4ni6hCfTcHr\nI5K52mE58k7GIcpJ2WkkrvsUv7Pp+K1FVvsUy/JRLyC7W7MYKPihe2uYImyEcUsv\nSPMb0FW6LPbSOT+LErt/8U0PhdYTaPOI7Ov2O1GIv6IGmqkHnh4Sp7UQu96Q3yN/\nBK8JupoWXOmKijR6hC7VxsiFKDRht4dT+AD7eiF4vfCqs2dZqkPNjxF5W5374rRZ\n1Nx9DIfVhXTYNkbS4yvsRCNoErYVn+jrX0W+VQLxjQKBgQDi2RsEWw2F/f+YbbRW\n7nKxOTS90p5TPHk5+ERUUD/auzGSgom08NsAkB2gwlUUjTneXpFLhraWCSKlCec2\nEAJ7AlobSFmSIUgmNMjvbgVnhjWVk8AmjzOCzDNsjgBe1FE14PjNI9BQmjmbKM+s\nTOluAE1B8BAEjlrYQQh0GaM9RwKBgQDMf/hgJiex4VdXipuUC9VdHeWtpHA+zEFD\nSfFD+yr1i1lAmHg7FPMNpKnZg7ayQXhET+rlg7vAQPkohp6L5N72U2OJfCYCuAWJ\nKVEnW8sBJfmb15MNf65fGAB2mOJmhBlOyRJWn96U2hA5tXAwdad5u79nIo2HIO64\n7tdiSMqxWwKBgFduS+5q1ZR+KAPszGPw9T1/CefbhHAaT7LbECLa5zF7koigTUjy\nx8W4xeKO49HO+K3PDvroCflbvgGUBowcsYgNiQMY6ITc1Pz8vTEi22xiGsbysk1q\nRfU0lOFS/auO81nrwpj2I7TdLDS0Dw6eeh2OejheuR24bCULM6Hju7nDAoGBAJpL\nB3RL9XExivvC2aV21DHgh9Vel03aQHdrh7x5+iyvSdUB9Nzm7odhsMErrqGJ4hrw\njVND9FmW7CaWg3MbaNpDintGD0vH2m1lnhRrHpysMUtS+GGb701SR68zpMYibxHR\nhaOUFZULfmh8K7x0WLrxW/WNzWiiAVvI4PsH3t63AoGBAM0fQV4Zh2K68z76AtNO\nu5cW8+64JZDsw7WrtzxTjklR+alxyb40G+9TlZ2jjarJru5NWtzME0BG5+oSMx1o\nmAyPOXGKaFh3CvApv8Y2CQ92bhQGUE9slFjP92D35AUbXMWLMUhRZ8nUDEpf0j5m\nXB81jSzva7v84JuedcYFoLbE\n-----END PRIVATE KEY-----\n",
+  "client_email": "cloud-storage-sa@datascience-capstone-project.iam.gserviceaccount.com",
+  "client_id": "112743604800224015797",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloud-storage-sa%40datascience-capstone-project.iam.gserviceaccount.com"
+}
